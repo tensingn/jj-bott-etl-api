@@ -1,0 +1,4 @@
+docker build . -t etl-api --secret id=npmrc,src=$HOME/.npmrc
+docker tag data-api us-central1-docker.pkg.dev/son-of-botker/cloud-run-service-images/data-api  
+gcloud auth print-access-token --impersonate-service-account 115592591009524555071 | docker login -u oauth2accesstoken --password-stdin https://us-central1-docker.pkg.dev
+docker push us-central1-docker.pkg.dev/son-of-botker/cloud-run-service-images/data-api

@@ -1,0 +1,5 @@
+node_modules
+dist
+key.json
+.env
+gcp-docker-process.txt
